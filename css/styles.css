@@ -12,6 +12,7 @@
      rgba(46, 47, 66, 0.7),
      rgba(46, 47, 66, 0.7)
      );
+    --valid-fields:#31D0AA;
 }
 
 html {
@@ -205,9 +206,6 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    /*display: flex;*/
-    /*align-items: center;
-    text-align: center;*/
     letter-spacing: 0.04em;
 
     cursor:pointer
@@ -216,19 +214,17 @@ body {
 .hero .btn {
     background-color: var(--primaru-brand-color);
     color: var(--secondery-text-color);
+    border-radius: 4px;
 
     padding: 16px 32px;
     display: inline-block;
-
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-
 }
 
 .hero .btn:hover, 
 .hero .btn:focus {   
     background-color: var(--pressed-state-color);
     color: var(--secondery-text-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /*-----SECTION------*/
@@ -372,18 +368,21 @@ body {
       height: 40px;
   
   }
-  .team-soc-link {
+  .soc-link {
       width: 100%;
       height: 100%;
-      background-color: var(--primaru-brand-color);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
   }
 
-  .team-soc-link:hover,
-  .team-soc-link:focus {
+  .team-card .soc-link{
+  background-color: var(--primaru-brand-color);
+  }
+
+  .team-card .soc-link:hover,
+  .team-card .soc-link:focus {
     background-color: var(--pressed-state-color);
   }
 
@@ -427,18 +426,13 @@ body {
     display: flex;
     align-items: center;
     justify-content:center ;
-    fill: #8E8F99;
+    fill: var(--helper-text-color);
 }
 
 .customers-link:hover {
-    border-color: #404BBF;
-    fill: #404BBF;
+    border-color: var(--pressed-state-color);
+    fill: var(--pressed-state-color);
 }
-
-
-
-
-
 
 
 /*-------FOOTER-------*/
@@ -448,10 +442,15 @@ body {
 
     padding-top: 100px;
     padding-bottom: 100px;
+
+}
+
+.footer > .container {
+    display: flex;
+    align-items: center;
 }
  
 .footer .text {
-    /* CORNFLOWER */
     color: var(--accent-color);
 
     max-width: 264px;
@@ -460,7 +459,45 @@ body {
 .footer .logo {
     margin-bottom: 16px;
     width: 115px;
-    
+}
+
+.footer> .container {
+    gap:120px;
+    align-items: flex-start;
+}
+
+.footer-soc-list {
+    display: flex; 
+    justify-content: center; 
+    gap: 16px;
+}
+
+.footer-item {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-soc .soc-link {
+    background-color:rgba(255, 255, 255, 0.1);
+}
+
+.footer-soc .soc-link:hover,
+.footer-soc .soc-link:focus{
+    background-color: var(--valid-fields);
+}
+
+.footer-icon{
+fill: var(--light-mode-color);
+}
+
+.footer-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--secondery-text-color);
+
+    margin-bottom: 16px;
 }
 
 /*---------------PORTFOLIO------------------*/
@@ -504,14 +541,14 @@ body {
     border: 1px solid var(--accent-color);
     border-radius: 4px;
 
-    padding: 12px 24px;
-    
+    padding: 12px 24px;   
 }
 .caption .btn:hover,
 .caption .btn:focus,
 .caption .btn:active {
     background-color: var(--pressed-state-color);
     color: var(--secondery-text-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /*----------CONTENT---------*/
 .content .title {
@@ -546,4 +583,11 @@ body {
     padding-bottom: 48px;
     border: 1px solid var(--accent-color);
     border-top: transparent;
+ 
+}
+
+
+.content-item:hover,
+.content-item:focus {  
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
